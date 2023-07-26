@@ -49,7 +49,8 @@ body * {
 
 /*configuração da caixa container*/
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*normalmente não se determina a altura no css*/
   /* border: 1px solid red; /*possibilitar a visualização*/
   /*definir a minha divisão e "edita-la" - dados do projeto -designer */
