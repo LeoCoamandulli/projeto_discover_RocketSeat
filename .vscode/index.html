@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- Define como um documento html 5-->
+<html lang="pt-br" class="">
+  <!--define a lingagem e criação da classe para o modo light-->
+  <head>
+    <!--Adição do código para as fontes obtido em fonts.google.com-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!--Primeiro nó: ajusta configurações do documento invisíveis ao usuário-->
+    <meta charset="UTF-8" />
+    <!--define uma compatibilidade de sistemas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--DEfine a largura da parte visível (body) como sendo a do dispositivo e o "zoom"-->
+    <title>LeoComandulli.dev</title>
+    <link rel="Stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <!--crio uma divisão de página-->
+      <div id="profile">
+        <!--Adicionando o avatar dentro da caixa profile-->
+        <img
+          src="./assets/avatar.png"
+          alt="Foto de Leonardo Comandulli com fundo de folhagem."
+        />
+        <!--Adicionando o @ dentro da caixa profile-->
+        <p>@leocomandulli_</p>
+      </div>
+      <!--fechamento do profile-->
+
+      <div id="switch" onclick="toggleMode()">
+        <!--Onclick aciona a função togglemode do meu JS-->
+        <!--Abre uma nova caixa para o botão-->
+        <button></button>
+        <span>
+          <!--Movimento do botão-->
+        </span>
+      </div>
+
+      <ul>
+        <!--criando uma lista desordenada se fosse ordenda seria ol e teria números-->
+        <li>
+          <!--Botão para LinkedIn-->
+          <a
+            href="https://www.linkedin.com/in/leonardocomandulli/"
+            target="_blank"
+            >Visite o meu LinedIn</a
+          >
+          <!-- target="_blank" abre uma nova guia para o link-->
+        </li>
+
+        <li>
+          <!--Botão para Github-->
+          <a href="https://github.com/LeoCoamandulli" target="_blank"
+            >Viste o meu GitHub</a
+          >
+        </li>
+
+        <li>
+          <!--Botão para Portfólio-->
+          <a href="#" target="_blank">Visite o meu porfólio</a>
+        </li>
+
+        <li>
+          <!--Botão para currículo-->
+          <a
+            href="./Curriculo/Currículo Profissional Leonardo Comandulli.pdf"
+            target="_blank"
+            >Veja o meu currículo</a
+          >
+        </li>
+      </ul>
+      <!--fechamento da lista-->
+
+      <!--criação da divisão dos ícones sociais-->
+      <div id="social_links">
+        <!--Botão Whats app-->
+        <a
+          href="https://wa.me/5541996548995?text=Ol%C3%A1,%20Leo!%20Vim%20atrav%C3%A9s%20do%20seu%20Site!"
+          target="_blank"
+        >
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+
+        <!--Botão Instagram-->
+        <a href="https://instagram.com/leocomandulli_" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <!--Botão Github-->
+        <a href="https://github.com/LeoCoamandulli" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+
+        <!--Botão LinkedIn-->
+        <a
+          href="https://www.linkedin.com/in/leonardocomandulli/"
+          target="_blank"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <!--fechamento social_links-->
+
+      <footer>
+        <!--Tag de criação de rodapé-->
+        Feito por LeoComandulli.dev<br />Aluno
+        <a href="https://rocketseat.com.br/" target="_blank">Rocket Seat</a>
+      </footer>
+      <!--Fechamento do rodapé-->
+    </div>
+    <!--fechamento container-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./script.JS"></script>
+  </body>
+</html>

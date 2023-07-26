@@ -1,0 +1,186 @@
+/*reset das configurações padrão do navegador*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*modo light*/
+:root {
+  --text-color: white;
+  --bg-color: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --social-link-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+.light {
+  --text-color: black;
+  --bg-color: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.1);
+  --social-link-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+/*configuração do background*/
+body {
+  /*background-image: url(./assets/bg-mobile.jpg); 
+  /* direciona a localização da imagem de fundo 
+  /*background-repeat: no-repeat;
+  /* não repete a imagem para completar a tela
+  /*background-position: top center; 
+  /* centraliza no x e alinha o início daimagem  com o topo
+  /*background-size: cover;
+  /* preenche todo o espaço com a imagem - dispositivo pequeno
+  
+  /*colocando tudo em uma função só na seguinte ordem shorthand/atalho: 
+  background: color  image  repeat position / size */
+  background: var(--bg-color) no-repeat top center / cover;
+}
+/* configuração das fontes*/
+body * {
+  /*o * serve para determinar para TODO o código*/
+  font-family: "Inter", sans-serif;
+  /* caracterizando a fonte utilizada - obtida em font.google.com*/
+  color: var(--text-color); /* determinação da cor da fonte*/
+}
+
+/*configuração da caixa container*/
+#container {
+  width: 360px;
+  /*normalmente não se determina a altura no css*/
+  /* border: 1px solid red; /*possibilitar a visualização*/
+  /*definir a minha divisão e "edita-la" - dados do projeto -designer */
+  margin: 56px auto 0px; /*56 em cima, auto nas laterais e 0 embaixo*/
+  padding: 0 24px;
+}
+/*config do profile*/
+#profile {
+  text-align: center;
+  padding: 24px; /*o padding pode ser visto no figma pressionando alt e passando o mouse*/
+}
+/*configuração do avatar dentro da caixa profile*/
+#profile img {
+  /*div é um elemento in line, para utilizarmos margin: auto devemos configura-lo como elemento block -nessa seção, centralizamos o avatar dentro do container e definimos seu tamanho dentro do bloco */
+  display: block;
+  width: 112px;
+  margin: auto;
+}
+/*configuração do @ dentro da caixa profile*/
+#profile p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*Switch*/
+#switch {
+  position: relative; /*vai relativizar a posição do absoluto do botão*/
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  /*posicionamento dos botôes em layrs(andares)*/
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+/*movimento*/
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*Links*/
+ul {
+  list-style: none; /*tira os pontinhos*/
+  display: flex; /*ajuste flexível*/
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+/*Propriedade default dos botões*/
+ul li a {
+  /*Posicionamento do botão*/
+  display: flex; /*ajuste flexível*/
+  justify-content: center; /*Centraliza em Y*/
+  align-items: center; /*Centraliza em X*/
+
+  /*Design do botão*/
+  padding: 16px 24px; /*espaçamento -> tamanho do botão*/
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  /*RGBA: red, blue, green, alfa (transparência)*/
+  border-radius: 8px; /*arredondamento de borda*/
+  backdrop-filter: blur(4px); /*adiciona o efeito de blur*/
+  -webkit-backdrop-filter: blur(4px); /*adaptação para rodar no safari 9*/
+  text-decoration: none; /*retira o sublinhado*/
+  font-weight: 500;
+
+  transition: background 0.6s;
+}
+
+/*Propriedades do botão quando posicionar o mouse pseudo-selector*/
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/*propriedades para os ícones do social_links*/
+#social_links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+/*propriedades para os ícones do social_links pré-pressionado*/
+
+#social_links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* essa ação tem por fim centralizar tudo que está em a, incluindo a bolinha na própxima seção*/
+  padding: 18px; /* já deixa no tamanho da bolinha pranão pular, tira a necessidade do gap*/
+
+  transition: background 0.2s;
+  border-radius: 50%; /*adicionado fora do hover pois dentro formava um quadrado*/
+}
+#social_links a:hover {
+  background: var(--social-link-color);
+  font-size: 25px;
+  /*border-radius: 50%;  /*border redondo*/
+}
+
+footer {
+  font-size: smaller;
+  padding: 24px 0;
+  text-align: center;
+  transition: 0.2s;
+}
+footer a:hover {
+  font-weight: bold;
+}
